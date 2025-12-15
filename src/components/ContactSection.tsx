@@ -64,20 +64,6 @@ export const ContactSection = () => {
               </motion.a>
             ))}
           </div>
-
-          {/* CTA */}
-          <motion.a
-            href="mailto:seu@email.com"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold text-lg glow-box hover:bg-primary/90 transition-colors"
-          >
-            <Mail size={20} />
-            Enviar Email
-          </motion.a>
         </motion.div>
       </div>
 
