@@ -28,7 +28,7 @@ export const projectsData: Project[] = [
     title: "Agente LABRIOT",
     image: "images/agentelab.png",
     description: "Chatbot educacional utilizando RAG (Retrieval-Augmented Generation) com Google Gemini. Indexa documentos PDF para responder dúvidas de programação e gerar desafios.",
-    techs: ["LangChain", "Gemini API", "FastAPI", "React", "FAISS"],
+    techs: ["LangChain", "Gemini API", "FastAPI", "React", "FAISS","RAG"],
     link: "#",
     github: "https://github.com/viniciushashizume/agente-labriot"
   },
@@ -79,10 +79,10 @@ export const projectsData: Project[] = [
   },
   {
     id: 8,
-    title: "Mindscape Insights",
+    title: "Mindscape",
     image: "/images/MentalHealth.png",
-    description: "Plataforma moderna para visualização de dados de saúde mental, focada em análise de sintomas e identificação de arquétipos comportamentais.",
-    techs: ["React", "Vite", "shadcn/ui", "Data Viz"],
+    description: "Protótipo inicial criado para um projeto de iniciação científica da UTFPR, para visualização de dados de saúde mental, focada em análise de sintomas e identificação de arquétipos comportamentais.",
+    techs: ["React", "Vite", "shadcn/ui", "Data Viz", "Python"],
     link: "#",
     github: "https://github.com/viniciushashizume/mindscape-insights"
   }
