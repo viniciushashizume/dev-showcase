@@ -2,7 +2,7 @@
   "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/viniciushashizume/dev-showcase",
+  "homepage": "https://viniciushashizume.github.io/dev-showcase/",
   "type": "module",
   "scripts": {
     "dev": "vite",
