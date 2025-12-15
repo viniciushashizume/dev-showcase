@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const socialLinks = [
   {
@@ -67,18 +67,6 @@ export const ContactSection = () => {
         </motion.div>
       </div>
 
-      {/* Footer */}
-      <footer className="mt-24 pt-8 border-t border-border/50">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-muted-foreground text-sm">
-            <p className="flex items-center gap-2">
-              Feito com <Heart size={16} className="text-red-500 fill-red-500" /> por{" "}
-              <span className="text-foreground font-medium">Seu Nome</span>
-            </p>
-            <p>© {new Date().getFullYear()} Todos os direitos reservados.</p>
-          </div>
-        </div>
-      </footer>
     </section>
   );
 };
