@@ -18,7 +18,7 @@ const socialLinks = [
   {
     name: "Email",
     icon: Mail,
-    href: "viniciushashizume26@gmail.com",
+    href: "mailto:viniciushashizume26@gmail.com",
     color: "hover:bg-primary hover:text-primary-foreground hover:border-primary",
   },
 ];
