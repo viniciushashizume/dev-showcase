@@ -6,19 +6,19 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com/seu-usuario",
+    href: "https://github.com/viniciushashizume",
     color: "hover:bg-foreground hover:text-background",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com/in/seu-usuario",
+    href: "https://www.linkedin.com/in/vinicius-hashizume/",
     color: "hover:bg-[#0077B5] hover:text-white hover:border-[#0077B5]",
   },
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:seu@email.com",
+    href: "viniciushashizume26@gmail.com",
     color: "hover:bg-primary hover:text-primary-foreground hover:border-primary",
   },
 ];
