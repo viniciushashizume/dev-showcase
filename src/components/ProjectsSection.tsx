@@ -53,7 +53,7 @@ const ProjectCard = ({ project, index }: { project: typeof projectsData[0]; inde
         <h3 className="font-display text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
           {project.title}
         </h3>
-        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+        <p className="text-muted-foreground text-sm mb-4">
           {project.description}
         </p>
 
