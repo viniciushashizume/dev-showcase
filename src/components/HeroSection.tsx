@@ -33,7 +33,7 @@ export const HeroSection = () => {
             className="font-display text-5xl md:text-7xl font-bold mb-6"
           >
             Eu sou{" "}
-            <span className="gradient-text">Seu Nome</span>
+            <span className="gradient-text">Vinicius Hashizume</span>
           </motion.h1>
 
           {/* Bio */}
@@ -61,7 +61,7 @@ export const HeroSection = () => {
             </div>
             <div className="glass rounded-xl px-5 py-3 flex items-center gap-3">
               <MapPin className="text-accent" size={20} />
-              <span className="text-sm font-medium">Sua Universidade</span>
+              <span className="text-sm font-medium">Universidade Tecnológica Federal do Paraná</span>
             </div>
           </motion.div>
 

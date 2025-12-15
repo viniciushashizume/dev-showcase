@@ -16,57 +16,75 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Dashboard",
+    title: "Stock Insight Hub",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    description: "Dashboard completo para gerenciamento de vendas com gráficos interativos e relatórios em tempo real.",
-    techs: ["React", "TypeScript", "Tailwind", "Chart.js"],
+    description: "Dashboard de inteligência de estoque hospitalar premiado (Desafio Unimed). Utiliza Machine Learning (K-Means) para otimizar compras, detectar itens críticos e prevenir rupturas.",
+    techs: ["React", "FastAPI", "Python", "Scikit-learn", "Pandas"],
     link: "#",
-    github: "#"
+    github: "https://github.com/viniciushashizume/stock-insight-hub"
   },
   {
     id: 2,
-    title: "Task Manager API",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop",
-    description: "API RESTful para gerenciamento de tarefas com autenticação JWT e documentação Swagger.",
-    techs: ["Node.js", "Express", "MongoDB", "JWT"],
+    title: "Agente LABRIOT (RAG)",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
+    description: "Chatbot educacional utilizando RAG (Retrieval-Augmented Generation) com Google Gemini. Indexa documentos PDF para responder dúvidas de programação e gerar desafios.",
+    techs: ["LangChain", "Gemini API", "FastAPI", "React", "FAISS"],
     link: "#",
-    github: "#"
+    github: "https://github.com/viniciushashizume/agente-labriot"
   },
   {
     id: 3,
-    title: "AI Chat Assistant",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-    description: "Assistente virtual inteligente com processamento de linguagem natural e integração com APIs.",
-    techs: ["Python", "FastAPI", "OpenAI", "React"],
+    title: "Restaurant Analytics",
+    image: "https://images.unsplash.com/photo-1556910103-1c02745a30bf?w=600&h=400&fit=crop",
+    description: "Dashboard full-stack containerizado para redes de restaurantes. Processa dados massivos de vendas e operações com visualizações em tempo real.",
+    techs: ["Docker", "PostgreSQL", "Node.js", "React", "Nginx"],
     link: "#",
-    github: "#"
+    github: "https://github.com/viniciushashizume/desafio-god-level-coder-challenge"
   },
   {
     id: 4,
-    title: "Mobile Fitness App",
-    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&h=400&fit=crop",
-    description: "Aplicativo mobile para acompanhamento de treinos e metas fitness com sincronização em nuvem.",
-    techs: ["React Native", "Firebase", "Redux"],
+    title: "IoT Smart Pet Feeder",
+    image: "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?w=600&h=400&fit=crop",
+    description: "Sistema IoT completo para monitoramento de ração. Inclui hardware ESP8266, comunicação MQTT, servidor Flask e análise preditiva de padrões de alimentação com PyTorch.",
+    techs: ["IoT/ESP8266", "Python Flask", "React", "PyTorch", "MQTT"],
     link: "#",
-    github: "#"
+    github: "https://github.com/viniciushashizume/projeto-alimentador-labriot-2"
   },
   {
     id: 5,
-    title: "Weather Dashboard",
-    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-    description: "Painel meteorológico com previsões detalhadas, mapas interativos e alertas personalizados.",
-    techs: ["Vue.js", "Vuex", "OpenWeather API"],
+    title: "Steam Dashboard",
+    image: "https://images.unsplash.com/photo-1616499370260-485b3e5ed653?w=600&h=400&fit=crop",
+    description: "Aplicação web que consome a API da Steam para exibir perfis de jogadores, estatísticas detalhadas e gráficos de jogos mais jogados.",
+    techs: ["MERN Stack", "TypeScript", "Tailwind", "Steam API"],
     link: "#",
-    github: "#"
+    github: "https://github.com/viniciushashizume/steamdashboard"
   },
   {
     id: 6,
-    title: "Blockchain Wallet",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop",
-    description: "Carteira digital descentralizada com suporte multi-chain e interface intuitiva.",
-    techs: ["Solidity", "Web3.js", "Next.js", "Ethers"],
+    title: "VoteFlix",
+    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&h=400&fit=crop",
+    description: "Sistema distribuído de avaliação de filmes. Implementa arquitetura cliente-servidor robusta com comunicação via Sockets, Threads e persistência em MySQL.",
+    techs: ["Java", "Sockets", "MySQL", "Multithreading", "Maven"],
     link: "#",
-    github: "#"
+    github: "https://github.com/viniciushashizume/projeto-sistemas-distribuids"
+  },
+  {
+    id: 7,
+    title: "Pac-Man AI",
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop",
+    description: "Implementação de Inteligência Artificial no clássico Pac-Man. Fantasmas utilizam algoritmos de busca A* e Gulosa para perseguir o jogador em labirintos dinâmicos.",
+    techs: ["GameMaker", "GML", "AI Algorithms", "A* Search"],
+    link: "#",
+    github: "https://github.com/viniciushashizume/cidades-inteligentes---pacman"
+  },
+  {
+    id: 8,
+    title: "Mindscape Insights",
+    image: "https://images.unsplash.com/photo-1505542435372-995ad76c6694?w=600&h=400&fit=crop",
+    description: "Plataforma moderna para visualização de dados de saúde mental, focada em análise de sintomas e identificação de arquétipos comportamentais.",
+    techs: ["React", "Vite", "shadcn/ui", "Data Viz"],
+    link: "#",
+    github: "https://github.com/viniciushashizume/mindscape-insights"
   }
 ];
 
@@ -128,11 +146,14 @@ export const techStack = [
   { name: "React", category: "Frontend" },
   { name: "TypeScript", category: "Language" },
   { name: "Node.js", category: "Backend" },
-  { name: "Python", category: "Language" },
   { name: "Tailwind CSS", category: "Styling" },
-  { name: "PostgreSQL", category: "Database" },
-  { name: "MongoDB", category: "Database" },
+  { name: "Python", category: "Language" },
+  { name: "Java", category: "Language" },
+  { name: "JavaScript", category: "Language" },
+  { name: "Python", category: "Language" },
+  { name: "C++", category: "Language" },
   { name: "Docker", category: "DevOps" },
+  { name: "PostgreSQL", category: "Database" },
+  { name: "MySQL", category: "Database" },
   { name: "Git", category: "Tools" },
-  { name: "AWS", category: "Cloud" },
 ];
