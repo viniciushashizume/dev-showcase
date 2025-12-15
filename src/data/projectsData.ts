@@ -80,7 +80,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 8,
-    title: "Mindscape",
+    title: "Dashboard Saúde Mental",
     // Corrigido: Removido o caminho absoluto e adicionado o prefixo correto
     image: "/dev-showcase/images/MentalHealth.png",
     description: "Protótipo inicial criado para um projeto de iniciação científica da UTFPR, para visualização de dados de saúde mental, focada em análise de sintomas e identificação de arquétipos comportamentais.",
