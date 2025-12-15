@@ -72,7 +72,7 @@ export const projectsData: Project[] = [
     id: 7,
     title: "Pac-Man AI",
     image: "images/pacman.png",
-    description: "Implementação de Inteligência Artificial no clássico Pac-Man. Fantasmas utilizam algoritmos de busca A* e Gulosa para perseguir o jogador em labirintos dinâmicos.",
+    description: "Implementação de Inteligência Artificial no clássico Pac-Man, com o tema de cidades inteligentes. Os inimigos utilizam algoritmos de busca A* e Gulosa para perseguir o jogador em labirintos dinâmicos.",
     techs: ["GameMaker", "GML", "AI Algorithms", "A* Search"],
     link: "#",
     github: "https://github.com/viniciushashizume/cidades-inteligentes---pacman"
