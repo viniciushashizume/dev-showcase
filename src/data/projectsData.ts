@@ -17,8 +17,9 @@ export const projectsData: Project[] = [
   {
     id: 1,
     title: "Dasboard Desafio Unimed",
-    image: "images/dashboardunimed.png",
-    description: "Dashboard de inteligência de estoque hospitalar para a UNIMED. Utiliza algoritmos de Machine Learning para encontrar grupos de itens classificados por similiridade, detectar itens críticos, ",
+    // Adicionado /dev-showcase/ no início
+    image: "/dev-showcase/images/dashboardunimed.png", 
+    description: "Dashboard de inteligência de estoque hospitalar para a UNIMED. Utiliza algoritmos de Machine Learning para encontrar grupos de itens classificados por similiridade, detectar itens críticos.",
     techs: ["React", "FastAPI", "Python", "Scikit-learn", "Pandas"],
     link: "#",
     github: "https://github.com/viniciushashizume/stock-insight-hub"
@@ -26,7 +27,7 @@ export const projectsData: Project[] = [
   {
     id: 2,
     title: "Agente LABRIOT",
-    image: "images/agentelab.png",
+    image: "/dev-showcase/images/agentelab.png",
     description: "Chatbot educacional utilizando RAG (Retrieval-Augmented Generation) com Google Gemini. Indexa documentos PDF para responder dúvidas de programação e gerar desafios.",
     techs: ["LangChain", "Gemini API", "FastAPI", "React", "FAISS","RAG"],
     link: "#",
@@ -35,7 +36,7 @@ export const projectsData: Project[] = [
   {
     id: 3,
     title: "Restaurant Analytics",
-    image: "images/RestaurantAnalytics.png",
+    image: "/dev-showcase/images/RestaurantAnalytics.png",
     description: "Dashboard full-stack containerizado para redes de restaurantes. Processa dados massivos de vendas e operações com visualizações em tempo real.",
     techs: ["Docker", "PostgreSQL", "Node.js", "React", "Nginx"],
     link: "#",
@@ -44,7 +45,7 @@ export const projectsData: Project[] = [
   {
     id: 4,
     title: "Monitoramento de Ração IoT",
-    image: "images/dashboard.png",
+    image: "/dev-showcase/images/dashboard.png",
     description: "Sistema IoT completo para monitoramento de ração. Inclui hardware ESP8266, comunicação MQTT, servidor Flask e análise preditiva de padrões de alimentação com PyTorch.",
     techs: ["IoT/ESP8266", "Python Flask", "React", "PyTorch", "MQTT"],
     link: "#",
@@ -53,7 +54,7 @@ export const projectsData: Project[] = [
   {
     id: 5,
     title: "Steam Dashboard",
-    image: "images/steam.png",
+    image: "/dev-showcase/images/steam.png",
     description: "Aplicação web que consome a API da Steam para exibir perfis de jogadores, estatísticas detalhadas e gráficos de jogos mais jogados.",
     techs: ["MERN Stack", "TypeScript", "Tailwind", "Steam API"],
     link: "#",
@@ -62,7 +63,7 @@ export const projectsData: Project[] = [
   {
     id: 6,
     title: "VoteFlix",
-    image: "images/voteflix.png",
+    image: "/dev-showcase/images/voteflix.png",
     description: "Sistema distribuído de avaliação de filmes. Implementa arquitetura cliente-servidor robusta com comunicação via Sockets, Threads e persistência em MySQL.",
     techs: ["Java", "Sockets", "MySQL", "Multithreading", "Maven"],
     link: "#",
@@ -71,7 +72,7 @@ export const projectsData: Project[] = [
   {
     id: 7,
     title: "Pac-Man AI",
-    image: "images/pacman.png",
+    image: "/dev-showcase/images/pacman.png",
     description: "Implementação de Inteligência Artificial no clássico Pac-Man, com o tema de cidades inteligentes. Os inimigos utilizam algoritmos de busca A* e Gulosa para perseguir o jogador em labirintos dinâmicos.",
     techs: ["GameMaker", "GML", "AI Algorithms", "A* Search"],
     link: "#",
@@ -80,7 +81,8 @@ export const projectsData: Project[] = [
   {
     id: 8,
     title: "Mindscape",
-    image: "/images/MentalHealth.png",
+    // Corrigido: Removido o caminho absoluto e adicionado o prefixo correto
+    image: "/dev-showcase/images/MentalHealth.png",
     description: "Protótipo inicial criado para um projeto de iniciação científica da UTFPR, para visualização de dados de saúde mental, focada em análise de sintomas e identificação de arquétipos comportamentais.",
     techs: ["React", "Vite", "shadcn/ui", "Data Viz", "Python"],
     link: "#",
