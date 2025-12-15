@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { projectsData } from "@/data/projectsData";
 
 const ProjectCard = ({ project, index }: { project: typeof projectsData[0]; index: number }) => {
@@ -37,14 +37,6 @@ const ProjectCard = ({ project, index }: { project: typeof projectsData[0]; inde
               <Github size={18} />
             </a>
           )}
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2 rounded-full bg-background/80 backdrop-blur-sm text-foreground hover:text-primary transition-colors"
-          >
-            <ExternalLink size={18} />
-          </a>
         </div>
       </div>
 
