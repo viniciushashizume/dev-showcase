@@ -29,15 +29,15 @@ export const projectsData: Project[] = [
     title: "Agente LABRIOT",
     image: "/dev-showcase/images/agentelab.png",
     description: "Chatbot educacional utilizando RAG (Retrieval-Augmented Generation) com Google Gemini. Indexa documentos PDF para responder dúvidas de programação e gerar desafios.",
-    techs: ["LangChain", "Gemini API", "FastAPI", "React", "FAISS","RAG"],
+    techs: ["LangChain", "Gemini API", "FastAPI", "React","RAG"],
     link: "#",
     github: "https://github.com/viniciushashizume/agente-labriot"
   },
   {
-    id: 3,
+    id: 5,
     title: "Restaurant Analytics",
     image: "/dev-showcase/images/RestaurantAnalytics.png",
-    description: "Dashboard full-stack containerizado para redes de restaurantes. Processa dados massivos de vendas e operações com visualizações em tempo real.",
+    description: "Dashboard full-stack containerizado para redes de restaurantes. Processa dados de vendas e operações com visualizações em tempo real.",
     techs: ["Docker", "PostgreSQL", "Node.js", "React", "Nginx"],
     link: "#",
     github: "https://github.com/viniciushashizume/desafio-god-level-coder-challenge"
@@ -52,13 +52,13 @@ export const projectsData: Project[] = [
     github: "https://github.com/viniciushashizume/projeto-alimentador-labriot-2"
   },
   {
-    id: 5,
-    title: "Steam Dashboard",
-    image: "/dev-showcase/images/steam.png",
-    description: "Aplicação web que consome a API da Steam para exibir perfis de jogadores, estatísticas detalhadas e gráficos de jogos mais jogados.",
-    techs: ["MERN Stack", "TypeScript", "Tailwind", "Steam API"],
-    link: "#",
-    github: "https://github.com/viniciushashizume/steamdashboard"
+    id: 2,
+    title: "Site LABRIOT",
+    image: "/dev-showcase/images/labriotsite.png",
+    description: "Site institucional do Laboratório de Robótica e IoT da Universidade Tecnológica Federal do Paraná. Uma aplicação FullStack, com sistema de login com autenticação JWT ",
+    techs: ["Typescritp", "React", "CSS", "JWT","PostgreSQL"],
+    link: "https://labriot-website.vercel.app/",
+    github: "#"
   },
   {
     id: 6,
@@ -87,7 +87,15 @@ export const projectsData: Project[] = [
     techs: ["React", "Vite", "shadcn/ui", "Data Viz", "Python"],
     link: "#",
     github: "https://github.com/viniciushashizume/mindscape-insights"
-  }
+  }, 
+  /*{
+    
+    description: "Site Institu",
+    techs: ["React", "Vite", "shadcn/ui", "Data Viz", "Python"],
+    link: "#",
+    github: "https://github.com/viniciushashizume/mindscape-insights"
+  }, */
+
 ];
 
 // =========================================
@@ -148,14 +156,13 @@ export const techStack = [
   { name: "React", category: "Frontend" },
   { name: "TypeScript", category: "Language" },
   { name: "Node.js", category: "Backend" },
-  { name: "Tailwind CSS", category: "Styling" },
   { name: "Python", category: "Language" },
   { name: "Java", category: "Language" },
   { name: "JavaScript", category: "Language" },
   { name: "Python", category: "Language" },
-  { name: "C++", category: "Language" },
   { name: "Docker", category: "DevOps" },
   { name: "PostgreSQL", category: "Database" },
+  { name: "MongoDB", category: "Database"},
   { name: "MySQL", category: "Database" },
   { name: "Git", category: "Tools" },
 ];
