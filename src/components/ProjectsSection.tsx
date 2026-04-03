@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { Github } from "lucide-react";
-import { projectsData } from "@/data/projectsData";
+import { useRef, useState } from "react";
+import { Github, ExternalLink } from "lucide-react";
+import { projectsData, Project } from "@/data/projectsData";
 
-const ProjectCard = ({ project, index }: { project: typeof projectsData[0]; index: number }) => {
+const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -27,6 +27,16 @@ const ProjectCard = ({ project, index }: { project: typeof projectsData[0]; inde
         
         {/* Overlay Links */}
         <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-background/80 backdrop-blur-sm text-foreground hover:text-primary transition-colors"
+            >
+              <ExternalLink size={18} />
+            </a>
+          )}
           {project.github && (
             <a
               href={project.github}
@@ -65,9 +75,17 @@ const ProjectCard = ({ project, index }: { project: typeof projectsData[0]; inde
   );
 };
 
+const categories = [
+  { key: "software" as const, label: "Software" },
+  { key: "gamedev" as const, label: "GameDev" },
+];
+
 export const ProjectsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [activeCategory, setActiveCategory] = useState<"software" | "gamedev">("software");
+
+  const filteredProjects = projectsData.filter((p) => p.category === activeCategory);
 
   return (
     <section id="projetos" className="py-24 relative">
@@ -89,11 +107,34 @@ export const ProjectsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+        {/* Category Tabs */}
+        <div className="flex justify-center gap-2 mb-12">
+          {categories.map((cat) => (
+            <button
+              key={cat.key}
+              onClick={() => setActiveCategory(cat.key)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                activeCategory === cat.key
+                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25"
+                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+              }`}
+            >
+              {cat.label}
+            </button>
           ))}
         </div>
+
+        <motion.div
+          key={activeCategory}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {filteredProjects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
+          ))}
+        </motion.div>
       </div>
     </section>
   );
