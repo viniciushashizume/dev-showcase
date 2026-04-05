@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { name: "Sobre", href: "#sobre" },
-  { name: "Projetos", href: "#projetos" },
-];
+import { Menu, X, Globe } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +15,11 @@ export const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinks = [
+    { name: t("nav.about"), href: "#sobre" },
+    { name: t("nav.projects"), href: "#projetos" },
+  ];
 
   return (
     <motion.header
@@ -54,6 +56,20 @@ export const Header = () => {
               {link.name}
             </motion.a>
           ))}
+
+          {/* Language Toggle */}
+          <motion.button
+            onClick={toggleLanguage}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-medium hover:bg-secondary/80 transition-colors"
+            title={language === "pt" ? "Switch to English" : "Mudar para Português"}
+          >
+            <Globe size={14} />
+            {language === "pt" ? "EN" : "PT"}
+          </motion.button>
+
           <motion.a
             href="#contato"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -61,17 +77,26 @@ export const Header = () => {
             transition={{ duration: 0.4, delay: 0.4 }}
             className="px-5 py-2 rounded-full bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors glow-box"
           >
-            Contato
+            {t("nav.contact")}
           </motion.a>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-3">
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-medium"
+          >
+            <Globe size={14} />
+            {language === "pt" ? "EN" : "PT"}
+          </button>
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 text-foreground hover:text-primary transition-colors"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}

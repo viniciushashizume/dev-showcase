@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowDown, GraduationCap, MapPin } from "lucide-react";
 import { techStack } from "@/data/projectsData";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="sobre" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
       {/* Background Effects */}
@@ -13,7 +16,6 @@ export const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Greeting */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -21,33 +23,36 @@ export const HeroSection = () => {
             className="mb-6"
           >
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
-              👋 Olá, seja bem-vindo!
+              {t("hero.greeting")}
             </span>
           </motion.div>
 
-          {/* Name */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-4xl md:text-5xl font-bold mb-6"
           >
-            Eu sou <span className="gradient-text">Vinicius Hashizume</span>
+            {t("hero.iam")} <span className="gradient-text">Vinicius Hashizume</span>
           </motion.h1>
 
-          {/* Bio */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Estudante de <span className="text-primary font-medium">Ciência da Computação</span>, 
-            apaixonado por desenvolvimento de software e criação de experiências digitais inovadoras. 
-            Transformo ideias em código limpo e soluções elegantes.
+            {t("hero.bio").includes("<cs>") ? (
+              <>
+                {t("hero.bio").split("<cs>")[0]}
+                <span className="text-primary font-medium">
+                  {t("hero.bio").split("<cs>")[1]?.split("</cs>")[0]}
+                </span>
+                {t("hero.bio").split("</cs>")[1]}
+              </>
+            ) : t("hero.bio")}
           </motion.p>
 
-          {/* Education Badge */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,22 +61,21 @@ export const HeroSection = () => {
           >
             <div className="glass rounded-xl px-5 py-3 flex items-center gap-3">
               <GraduationCap className="text-primary" size={20} />
-              <span className="text-sm font-medium">Ciência da Computação</span>
+              <span className="text-sm font-medium">{t("hero.degree")}</span>
             </div>
             <div className="glass rounded-xl px-5 py-3 flex items-center gap-3">
               <MapPin className="text-accent" size={20} />
-              <span className="text-sm font-medium">Universidade Tecnológica Federal do Paraná</span>
+              <span className="text-sm font-medium">{t("hero.university")}</span>
             </div>
           </motion.div>
 
-          {/* Tech Stack */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-12"
           >
-            <p className="text-muted-foreground text-sm mb-4">Tecnologias que domino</p>
+            <p className="text-muted-foreground text-sm mb-4">{t("hero.techTitle")}</p>
             <div className="flex flex-wrap justify-center gap-3">
               {techStack.map((tech, index) => (
                 <motion.span
@@ -87,7 +91,6 @@ export const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Scroll Indicator */}
           <motion.a
             href="#projetos"
             initial={{ opacity: 0 }}
@@ -95,7 +98,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="inline-flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
-            <span className="text-sm">Ver projetos</span>
+            <span className="text-sm">{t("hero.scrollCta")}</span>
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
