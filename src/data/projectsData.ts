@@ -1,9 +1,6 @@
 // =========================================
 // EDITE SEUS PROJETOS AQUI
-// Adicione, remova ou modifique os projetos conforme necessário
 // =========================================
-
-import { m } from "framer-motion";
 
 export interface Project {
   id: number;
@@ -94,7 +91,7 @@ export const projectsData: Project[] = [
     category: "gamedev"
   },
   {
-    id: 8,
+    id: 80,
     title: "Resident Evil Camera",
     image: "/dev-showcase/images/ResidentEvilCamera.png",
     description: "As mecânicas implementadas envolvem um sistema de movimentação em controles 'tanque', manipulação de animações e um sistema clássico de troca de câmeras por ângulos e gatilhos na área de jogo.",
@@ -102,9 +99,9 @@ export const projectsData: Project[] = [
     link: "https://hashass.itch.io/resident-evil-camera",
     github: "https://github.com/viniciushashizume/Resident-Evil-Camera",
     category: "gamedev"
-  },  
+  },
   {
-    id: 9,
+    id: 90,
     title: "RPG Turn Based",
     image: "/dev-showcase/images/RPGTurnBased.png",
     description: "Este estudo tem como foco explorar conceitos de game design e programação voltados para recriar a atmosfera clássica de jogos de survival horror. As mecânicas implementadas envolvem um sistema de movimentação em controles 'tanque', manipulação de animações e um sistema clássico de troca de câmeras por ângulos e gatilhos na área de jogo.",
@@ -113,7 +110,7 @@ export const projectsData: Project[] = [
     github: "https://github.com/viniciushashizume/RPG",
     category: "gamedev"
   },
-    {
+  {
     id: 10,
     title: "Khodzu Game",
     image: "/dev-showcase/images/KhodzuGame.png",
@@ -136,56 +133,6 @@ export const projectsData: Project[] = [
 ];
 
 // =========================================
-// DADOS DA TIMELINE / JORNADA
-// =========================================
-
-export interface TimelineItem {
-  id: number;
-  year: string;
-  title: string;
-  description: string;
-  type: "education" | "work" | "project" | "achievement";
-}
-
-export const timelineData: TimelineItem[] = [
-  {
-    id: 1,
-    year: "2022",
-    title: "Início da Graduação",
-    description: "Comecei o curso de Ciência da Computação na universidade, dando o primeiro passo na minha jornada tech.",
-    type: "education"
-  },
-  {
-    id: 2,
-    year: "2023",
-    title: "Primeiro Projeto Open Source",
-    description: "Contribuí para meu primeiro projeto open source no GitHub, aprendendo sobre colaboração e código limpo.",
-    type: "project"
-  },
-  {
-    id: 3,
-    year: "2023",
-    title: "Estágio em Desenvolvimento",
-    description: "Iniciei meu primeiro estágio como desenvolvedor, trabalhando com React e Node.js em projetos reais.",
-    type: "work"
-  },
-  {
-    id: 4,
-    year: "2024",
-    title: "Hackathon Universitário",
-    description: "Venci o hackathon da universidade com um projeto de impacto social usando IA.",
-    type: "achievement"
-  },
-  {
-    id: 5,
-    year: "2024",
-    title: "Liderança de Projeto",
-    description: "Assumi a liderança técnica de um projeto interno, mentorando outros desenvolvedores juniores.",
-    type: "work"
-  }
-];
-
-// =========================================
 // TECH STACK
 // =========================================
 
@@ -196,7 +143,6 @@ export const techStack = [
   { name: "Python", category: "Language" },
   { name: "Java", category: "Language" },
   { name: "JavaScript", category: "Language" },
-  { name: "Python", category: "Language" },
   { name: "Docker", category: "DevOps" },
   { name: "PostgreSQL", category: "Database" },
   { name: "MongoDB", category: "Database" },

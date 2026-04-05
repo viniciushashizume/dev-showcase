@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const socialLinks = [
   {
@@ -26,6 +27,7 @@ const socialLinks = [
 export const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   return (
     <section id="contato" className="py-24 relative">
@@ -38,15 +40,13 @@ export const ContactSection = () => {
           className="text-center max-w-2xl mx-auto"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20 mb-4">
-            Contato
+            {t("contact.badge")}
           </span>
-          <h2 className="section-title">Vamos Conversar?</h2>
+          <h2 className="section-title">{t("contact.title")}</h2>
           <p className="text-muted-foreground mb-12">
-            Estou sempre aberto a novas oportunidades, colaborações interessantes 
-            ou apenas um bate-papo sobre tecnologia. Não hesite em entrar em contato!
+            {t("contact.subtitle")}
           </p>
 
-          {/* Social Links */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
             {socialLinks.map((link, index) => (
               <motion.a
@@ -66,7 +66,6 @@ export const ContactSection = () => {
           </div>
         </motion.div>
       </div>
-
     </section>
   );
 };
