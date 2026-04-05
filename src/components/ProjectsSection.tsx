@@ -77,7 +77,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 
 const categories = [
   { key: "software" as const, label: "Software" },
-  { key: "gamedev" as const, label: "GameDev" },
+  { key: "gamedev" as const, label: "Game Development" },
 ];
 
 export const ProjectsSection = () => {

@@ -3,6 +3,8 @@
 // Adicione, remova ou modifique os projetos conforme necessário
 // =========================================
 
+import { m } from "framer-motion";
+
 export interface Project {
   id: number;
   title: string;
@@ -83,10 +85,41 @@ export const projectsData: Project[] = [
   // ====== GAMEDEV ======
   {
     id: 7,
+    title: "Ninja Adventure",
+    image: "/dev-showcase/images/NinjaAdventure.png",
+    description: "Jogo com elementos de Action RPG feito sob perspectiva top-down. Estudo prático para o desenvolvimento de um sistema e combate em tempo real, integração de atributos de jogador e a implementação de IA para os inimigos utilizando uma Máquina de Estados Finitos (FSM)",
+    techs: ["Unity", "C#", "FSM"],
+    link: "https://hashass.itch.io/ninja-adventure",
+    github: "https://github.com/viniciushashizume/Ninja-Adventure",
+    category: "gamedev"
+  },
+  {
+    id: 8,
+    title: "Resident Evil Camera",
+    image: "/dev-showcase/images/ResidentEvilCamera.png",
+    description: "As mecânicas implementadas envolvem um sistema de movimentação em controles 'tanque', manipulação de animações e um sistema clássico de troca de câmeras por ângulos e gatilhos na área de jogo.",
+    techs: ["Godot", "GDScript", "Blender", "Mixamo"],
+    link: "https://hashass.itch.io/resident-evil-camera",
+    github: "https://github.com/viniciushashizume/Resident-Evil-Camera",
+    category: "gamedev"
+  },  
+  {
+    id: 9,
+    title: "RPG Turn Based",
+    image: "/dev-showcase/images/RPGTurnBased.png",
+    description: "Este estudo tem como foco explorar conceitos de game design e programação voltados para recriar a atmosfera clássica de jogos de survival horror. As mecânicas implementadas envolvem um sistema de movimentação em controles 'tanque', manipulação de animações e um sistema clássico de troca de câmeras por ângulos e gatilhos na área de jogo.",
+    techs: ["Godot", "GDScript", "Blender", "Mixamo"],
+    link: "https://hashass.itch.io/rpg-turn-based",
+    github: "https://github.com/viniciushashizume/RPG",
+    category: "gamedev"
+  },
+  {
+    id: 11,
     title: "Pac-Man AI",
     image: "/dev-showcase/images/pacman.png",
     description: "Implementação de Inteligência Artificial no clássico Pac-Man, com o tema de cidades inteligentes. Os inimigos utilizam algoritmos de busca A* e Gulosa para perseguir o jogador em labirintos dinâmicos.",
     techs: ["GameMaker", "GML", "AI Algorithms", "A* Search"],
+    link: "https://hashass.itch.io/smart-cities-pacman",
     github: "https://github.com/viniciushashizume/cidades-inteligentes---pacman",
     category: "gamedev"
   },
