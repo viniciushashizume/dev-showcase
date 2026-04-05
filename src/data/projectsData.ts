@@ -108,9 +108,19 @@ export const projectsData: Project[] = [
     title: "RPG Turn Based",
     image: "/dev-showcase/images/RPGTurnBased.png",
     description: "Este estudo tem como foco explorar conceitos de game design e programação voltados para recriar a atmosfera clássica de jogos de survival horror. As mecânicas implementadas envolvem um sistema de movimentação em controles 'tanque', manipulação de animações e um sistema clássico de troca de câmeras por ângulos e gatilhos na área de jogo.",
-    techs: ["Godot", "GDScript", "Blender", "Mixamo"],
+    techs: ["Game Maker Studio", "GML"],
     link: "https://hashass.itch.io/rpg-turn-based",
     github: "https://github.com/viniciushashizume/RPG",
+    category: "gamedev"
+  },
+    {
+    id: 10,
+    title: "Khodzu Game",
+    image: "/dev-showcase/images/KhodzuGame.png",
+    description: "Desenvolvido na Unity, este projeto é um jogo de Action Platformer inspirado na clássica franquia Mega Man. Criado como um estudo prático de game design e programação, o jogo explora mecânicas de física e movimentação — (como pulos e dashes), além de inteligência artificial básica.",
+    techs: ["Unity", "C#"],
+    link: "https://hashass.itch.io/khodzu-game",
+    github: "https://github.com/viniciushashizume/Khodzu-Game",
     category: "gamedev"
   },
   {
